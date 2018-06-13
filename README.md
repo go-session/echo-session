@@ -1,6 +1,6 @@
 # Session middleware for [Echo](https://github.com/labstack/echo)
 
-[![Build][Build-Status-Image]][Build-Status-Url] [![Coverage][Coverage-Image]][Coverage-Url] [![ReportCard][reportcard-image]][reportcard-url] [![GoDoc][godoc-image]][godoc-url] [![License][license-image]][license-url]
+[![Build][Build-Status-Image]][Build-Status-Url] [![Codecov][codecov-image]][codecov-url] [![ReportCard][reportcard-image]][reportcard-url] [![GoDoc][godoc-image]][godoc-url] [![License][license-image]][license-url]
 
 ## Quick Start
 
@@ -21,16 +21,13 @@ import (
 
 	"github.com/go-session/echo-session"
 	"github.com/labstack/echo"
-	"gopkg.in/session.v2"
+	"github.com/go-session/session"
 )
 
 func main() {
 	e := echo.New()
 
-	e.Use(echosession.New(
-		session.SetCookieName("session_id"),
-		session.SetSign([]byte("sign")),
-	))
+	e.Use(echosession.New())
 
 	e.GET("/", func(ctx echo.Context) error {
 		store := echosession.FromContext(ctx)
@@ -75,8 +72,8 @@ $ ./server
 
 [Build-Status-Url]: https://travis-ci.org/go-session/echo-session
 [Build-Status-Image]: https://travis-ci.org/go-session/echo-session.svg?branch=master
-[Coverage-Url]: https://coveralls.io/github/go-session/echo-session?branch=master
-[Coverage-Image]: https://coveralls.io/repos/github/go-session/echo-session/badge.svg?branch=master
+[codecov-url]: https://codecov.io/gh/go-session/echo-session
+[codecov-image]: https://codecov.io/gh/go-session/echo-session/branch/master/graph/badge.svg
 [reportcard-url]: https://goreportcard.com/report/github.com/go-session/echo-session
 [reportcard-image]: https://goreportcard.com/badge/github.com/go-session/echo-session
 [godoc-url]: https://godoc.org/github.com/go-session/echo-session

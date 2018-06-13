@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/go-session/session"
 	"github.com/labstack/echo"
-	"gopkg.in/session.v2"
 )
 
 func TestSession(t *testing.T) {

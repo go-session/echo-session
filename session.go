@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
+	"github.com/go-session/session"
 	"github.com/labstack/echo"
-	"gopkg.in/session.v2"
 )
 
 type (
