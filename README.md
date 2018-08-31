@@ -21,7 +21,6 @@ import (
 
 	"github.com/go-session/echo-session"
 	"github.com/labstack/echo"
-	"github.com/go-session/session"
 )
 
 func main() {
