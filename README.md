@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/go-session/echo-session"
-	"github.com/labstack/echo"
+	"github.com/go-session/echo-session/v3"
+	"github.com/labstack/echo/v4"
 )
 
 func main() {
