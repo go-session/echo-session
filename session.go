@@ -1,8 +1,8 @@
 package echosession
 
 import (
-	"github.com/go-session/session"
-	"github.com/labstack/echo"
+	"github.com/go-session/session/v3"
+	"github.com/labstack/echo/v4"
 )
 
 type (
