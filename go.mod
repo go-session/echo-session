@@ -1,4 +1,4 @@
-module github.com/echo-session
+module github.com/go-session/echo-session
 
 go 1.18
 
